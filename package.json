@@ -1,5 +1,5 @@
 {
-  "name": "lambda-body-parser",
+  "name": "@mooncake-dev/lambda-body-parser",
   "version": "1.0.0",
   "description": "AWS Lambda APIG proxy integration helper to parse an HTTP request body.",
   "main": "src/index.js",

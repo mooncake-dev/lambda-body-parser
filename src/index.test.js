@@ -5,7 +5,13 @@ const bodyParser = require('./');
 const INVALID = '{ "hello: , }';
 const VALID = '{ "hello": "world" }';
 
-describe('bodyParser.json(?body)', () => {
+describe('bodyParser.json(body)', () => {
+  test('throws with no JSON', () => {
+    expect(() => {
+      bodyParser.json();
+    }).toThrow(/^Request body must be valid JSON$/);
+  });
+
   test('throws with invalid JSON', () => {
     expect(() => {
       bodyParser.json(INVALID);
